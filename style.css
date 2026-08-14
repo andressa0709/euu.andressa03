@@ -1,0 +1,17 @@
+h1 {
+    color:aqua;
+
+}
+
+body {
+    background-color: aliceblue;
+
+}
+
+header{
+    border-bottom:1px solid black ;
+}
+
+footer{
+    border-top:1px solid black
+}
