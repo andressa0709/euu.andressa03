@@ -15,7 +15,7 @@ header{
 footer{
     border-top:1px solid black
 }
-    .imagem produto{
+    .imagem-produto{
         display: flex;
         align-items: center;
     }
