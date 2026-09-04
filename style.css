@@ -1,27 +1,165 @@
-h1 {
-    color: rgb(0, 17, 255);
+/* RESET E CONFIGURACOES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f9;
+    color: #333333;
+    line-height: 1.6;
 }
 
+/* CABECALHO */
 header {
-    border-bottom: 1px solid black;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    border-top: 1px solid black;
-}
-
-.imagem-produto {
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Adicione esta regra logo abaixo */
-.conteudo-produto img {
-    max-width: 300px;
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* SECAO DE BOAS-VINDAS (HERO) */
+.hero-section {
+    text-align: center;
+    padding: 3rem 1rem 1.5rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+/* GRADE DE CARDS (GRID LAYOUT) */
+.grid-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* ESTILIZACAO DOS CARDS */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    background-color: #eef2f7;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.card-header h2 {
+    font-size: 1.3rem;
+    color: #1e3c72;
+}
+
+.conteudo-produto {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.texto {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.texto p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #4a5568;
+}
+
+.texto h3 {
+    font-size: 1.05rem;
+    color: #2d3748;
+    margin: 1.2rem 0 0.5rem 0;
+}
+
+.texto ul {
+    list-style-position: inside;
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.texto li {
+    margin-bottom: 0.4rem;
+}
+
+/* RODAPE */
+footer {
+    background-color: #1e3c72;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
 }
